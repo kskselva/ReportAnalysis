@@ -1,0 +1,105 @@
+{
+	"team": "Cisco",
+	"date": "2017-08-02",
+	"category": {
+		"highlights": [
+			{
+				"highlights": "23"
+				
+			},
+			{
+				"highlights": "2"
+				
+			}
+		],
+		"solutionSupport": [
+			{
+				"customer": "w",
+				"ownedBy": "r",
+				"bidOwner": "r",
+				"itis": "r",
+				"geo": "r",
+				"industry": "t",
+				"isuowner": "t",
+				"action": "t"
+			}
+		],
+		"proactiveEngagement": [
+			{
+				"customer": "j",
+				"ownedBy": "k",
+				"bidOwner": "kl",
+				"itis": "l",
+				"geo": "ll",
+				"industry": "p",
+				"isuowner": "pp",
+				"action": "p"
+			}
+		],
+		"deliverySupport": [
+			{
+				"customer": "m",
+				"ownedBy": "m",
+				"bidOwner": "m",
+				"itis": "m",
+				"geo": "m",
+				"industry": "m",
+				"isuowner": "m",
+				"action": "m"
+			}
+		],
+		"labActivities": [
+			{
+				"activityName": "1",
+				"activityBy": "w"
+			}
+		],
+		"poC": [
+			{
+				"activityName": "t",
+				"activityBy": "w"
+			}
+		],
+		"customerVisit": [
+			{
+				"customerVisited": "f"
+			}
+		],
+		"internalActivities": [
+			{
+				"activityName": "f",
+				"activityBy": "s"
+			}
+		],
+		"certification": [
+			{
+				"activityName": "g",
+				"activityBy": "w"
+			}
+		],
+		"trainingConducted": [
+			{
+				"activityName": "q",
+				"activityBy": "t"
+			}
+		],
+		"trainingAttended": [
+			{
+				"activityName": "f",
+				"activityBy": "d"
+			}
+		],
+		"oemmeet": [
+			{
+				"activityName": "q",
+				"activityBy": "e"
+			}
+		],
+		"partnership": [
+			{
+				"activityName": "t",
+				"activityBy": "e"
+			}
+		]
+	}
+}

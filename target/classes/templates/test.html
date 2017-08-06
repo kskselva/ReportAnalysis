@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</meta>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</meta>
+<title> Weekly Report </title>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</link>
+<link rel='stylesheet' href='css/app.css' />
+
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/overhang.min.css" />
+<script type="text/javascript" src="js/overhang.min.js"></script>
+
+<script>
+  $( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true,
+      heightStyle: "content"
+    });
+  } );
+  
+  $( function() {
+	  
+	  $( "#datepicker" ).datepicker();
+	    $( "#datepicker" ).datepicker("option", "dateFormat", "yy-mm-dd" );
+	  } );
+  </script>
+
+<script src='/js/autosize.min.js'></script>
+<script>
+  autosize(document.getElementById('highlights'));
+</script>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Report Analysis</a>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container" style="min-height: 500px">
+	<form class="form-horizontal" id="main-form">
+		<fieldset>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="team">Select a Team</label> <select name="team"
+					id="team">
+					<option>Cisco</option>
+					<option>Genesys</option>
+
+					<option>Avaya</option>
+
+				</select>
+			</div>
+			
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="datepicker">Date</label>
+			
+			<div class="col-sm-10">
+			 <input type="text" id="datepicker"></input>
+			 
+			 </div>
+ 
+			</div>
+			
+			
+			<br></br>
+			<div id="accordion">
+				<h3>Highlights</h3>
+				<div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Highlights</label>
+					</div>
+					<p>
+						<textarea id='highlights' placeholder='Enter the highlights...'></textarea>
+					</p>
+
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button   id="savehighlights" onclick="saveHighlights()" 
+								class="btn btn-primary btn-lg,try-button sample">Save</button>
+
+						</div>
+					</div>
+
+				</div>
+				<h3>Soution Support</h3>
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Customer</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="SScustomer" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Owned By</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="SSownedBy" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Bid Owner</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="SSbidOwner" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">IT IS</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="SSITis" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Geo</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="SSgeo" />
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Industry</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="SSindustry" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">ISU Owner</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="SSISUOwner" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Action</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="SSaction" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="saveSS" onclick="saveSolutionSupport()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+
+				</div>
+				<h3>Proactive Engagement</h3>
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Customer</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="PEcustomer" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Owned By</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="PEownedBy" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Bid Owner</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="PEbidOwner" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">IT IS</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="PEITis" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Geo</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="PEgeo" />
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Industry</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="PEindustry" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">ISU Owner</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="PEISUOwner" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Action</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="PEaction" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="savePE" onclick="saveProactiveEngagement()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+
+				</div>
+				<h3>Delivery Support</h3>
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Customer</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="DScustomer" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Owned By</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="DSownedBy" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Bid Owner</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="DSbidOwner" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">IT IS</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="DSITis" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Geo</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="DSgeo" />
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Industry</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="DSindustry" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">ISU Owner</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="DSISUOwner" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Action</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="DSaction" />
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="saveDS" onclick="saveDeliverySupport()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+
+				</div>
+
+				<h3>Lab Activities</h3>
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Activity Name</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="labActivityName" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Worked By</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="labWorkedBy" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="saveLab" onclick="saveLabActivity()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+				</div>
+
+
+				<h3>PoC</h3>
+				<div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">POC</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="poc" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Owner</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="POCOwner" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="savePOC" onclick="savePoC()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+				</div>
+
+
+				<h3>Customer Visit</h3>
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Customer</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="customerVisited" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="saveCustVisit" onclick="saveCustomerVisit()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<h3>Internal Activities</h3>
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Activity</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="internalActivity" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Owner</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="intActOwner" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="saveIntAct" onclick="saveInternalActivities()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+				</div>
+
+
+				<h3>Certification</h3>
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Certification Name</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="certName" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Completed By</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="certBy" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="saveCert" onclick="saveCertification()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<h3>Training Conducted</h3>
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Name of the Training</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="trainingCond" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Conducted By</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="traningCondBy" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="savetrainingConduct"
+								onclick="saveTrainingConducted()" class="btn btn-primary btn-lg">Save
+							</button>
+
+						</div>
+					</div>
+
+				</div>
+
+
+				<h3>Training Attended</h3>
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Name of the Traning</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="trainingAtt" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Attended By</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="trainingAttBy" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="saveTrainingAtt" onclick="saveTrainingAttended()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+				</div>
+
+				<h3>OEM Meet</h3>
+
+
+				<div>
+
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">OEM Name</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="OEMName" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Attended By</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="OEMAttBy" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="saveOEE" onclick="saveOEMMeet()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+				</div>
+
+				<h3>Partnership</h3>
+
+
+
+				<div>
+
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">VenderName</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="venderBy" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Attended By</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="partnerAttBy" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="savePart" onclick="savePartnership()"
+								class="btn btn-primary btn-lg">Save</button>
+
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+
+<div>
+
+			
+			
+			</div>
+
+
+		</fieldset>
+		
+		<br></br>
+		<div class="text-center"></div>
+		
+		
+
+				<div class="text-center">
+					<button type="submit" id="submitButton" onclick="submitMessage()"
+						class="btn btn-primary btn-lg">Submit</button>
+
+					<button type="submit" id="resetButton" onclick="resetMessage()"
+						class="btn btn-primary btn-lg">Reset</button>
+				</div>
+
+
+<div id="download" disabled="true">
+<a href="/excel">Click here</a> to download the submitted report in excel format.
+
+</div>
+			
+
+	</form>
+	
+	</div>
+</body>
+</html>

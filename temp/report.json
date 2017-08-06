@@ -1,0 +1,100 @@
+{
+	"team": "Avaya",
+	"date": "11/01/2017",
+	"category": {
+		"highlights": [
+			{
+				"highlights": "1"
+			}
+		],
+		"solutionSupport": [
+			{
+				"SScustomer": "1",
+				"SSownedBy": "1",
+				"SSbidOwner": "r",
+				"SSITis": "r",
+				"SSgeo": "r",
+				"SSindustry": "r",
+				"SSISUOwner": "r",
+				"SSaction": "r"
+			}
+		],
+		"proactiveEngagement": [
+			{
+				"PEcustomer": "1",
+				"PEownedBy": "t",
+				"PEbidOwner": "t",
+				"PEITis": "t",
+				"PEgeo": "t",
+				"PEindustry": "t",
+				"PEISUOwner": "t",
+				"PEaction": "t"
+			}
+		],
+		"deliverySupport": [
+			{
+				"DScustomer": "2",
+				"DSownedBy": "h",
+				"DSbidOwner": "h",
+				"DSITis": "h",
+				"DSgeo": "h",
+				"DSindustry": "h",
+				"DSISUOwner": "h",
+				"DSaction": "h"
+			}
+		],
+		"labActivities": [
+			{
+				"labActivityName": "1",
+				"labWorkedBy": "w"
+			}
+		],
+		"PoC": [
+			{
+				"poc": "4",
+				"POCOwner": "w"
+			}
+		],
+		"customerVisit": [
+			{
+				"customerVisited": "l"
+			}
+		],
+		"internalActivities": [
+			{
+				"internalActivity": "l",
+				"intActOwner": "l"
+			}
+		],
+		"certification": [
+			{
+				"certName": "l",
+				"certBy": "j"
+			}
+		],
+		"trainingConducted": [
+			{
+				"trainingCond": "oop",
+				"traningCondBy": "kodjj"
+			}
+		],
+		"trainingAttended": [
+			{
+				"trainingAtt": "l",
+				"trainingAttBy": "k"
+			}
+		],
+		"OEMMeet": [
+			{
+				"OEMName": "tst",
+				"OEMAttBy": "jk"
+			}
+		],
+		"partnership": [
+			{
+				"venderBy": "ka",
+				"partnerAttBy": "s"
+			}
+		]
+	}
+}
